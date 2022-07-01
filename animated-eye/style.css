@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: #6C91C2;
+}
+
+.eye {
+  width: 245px;
+}
+
+.eye-center {
+  animation-name: moveEye;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveEye {
+  30% {
+    transform: translateX(-15px);
+  }
+  40%{
+    transform: translateX(-17px);
+  }
+  50% {
+    transform: translateY(6px) translateX(6px);
+  }
+  100% {
+    transform: translateY(-9px) translateX(-12px) scale(1.1);
+
+  }
+}
+
+.st0 {
+  animation-name: blinkEye;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinkEye {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
